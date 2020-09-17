@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import Nav from './components/Nav';
-import Body from './components/Body';
+import Nav from '../src/components/nav';
+import Gallery from '../src/components/gallery';
+import Footer from '../src/components/footer';
 
 class App extends Component {
 
   render () {
     return (
-      <>
-        <Nav />
           <div className="App">
-            <Body />
+            <Nav />
+            <Gallery />
+            <Footer />
           </div>
-      </>
     );
   }
 }
