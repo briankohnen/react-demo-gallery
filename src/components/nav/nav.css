@@ -66,7 +66,8 @@ a:hover {
     background: black;
     width: 10vw;
 }
-.dropdownContent p {
+.dropdownContent a {
+    display: block;
     color: white;
     background: black;
     border: 1px solid white;
@@ -78,8 +79,8 @@ a:hover {
     opacity: 1;
     visibility: visible;
 }
-.dropdownContent p:hover {
-    background: palevioletred;
+.dropdownContent a:hover {
+    background: yellow;
 }
 @media screen and (max-width: 700px) {
     .dropdownContent {

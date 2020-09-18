@@ -38,9 +38,9 @@ class Nav extends Component {
                             <li>
                                 <a href='#' className='navDropdown' onClick={this.toggleDropdown} onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>Portfolio</a>
                                 <div className='dropdownContent' onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
-                                    <p>ONE</p>
-                                    <p>TWO</p>
-                                    <p>THREE</p>
+                                    <a href='#' data-collection='1' onClick={this.props.handleCollectionState}>ONE</a>
+                                    <a href='#' data-collection='2' onClick={this.props.handleCollectionState}>TWO</a>
+                                    <a href='#' data-collection='3' onClick={this.props.handleCollectionState}>THREE</a>
                                 </div>
                             </li>
                             <li><a href='javascript:void(0);' onClick={this.showAbout}>About</a></li>

@@ -21,7 +21,7 @@
     opacity: 1;
 }
 .imgOverlay {
-    background: palevioletred;
+    background: black;
     position: relative;
     opacity: 0;
     height: 100%;
@@ -43,7 +43,7 @@ li:last-child {
     transform: scale(1.1);
 }
 .galleryItem:hover .imgOverlay {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 @media screen and (max-width: 700px) {
     .galleryItem {
