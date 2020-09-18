@@ -3,6 +3,18 @@ import './gallery.css';
 
 class Gallery extends Component {
 
+        galleryObserver = new IntersectionObserver(function(entries, galleryObserver) {
+                entries.forEach(entry => {
+                        if (!entry.isIntersecting) {
+                                return;
+                        } else {
+                                entry.target.classList.add('fadein');
+                                galleryObserver.unobserve(entry.target);
+                        }
+                });
+
+        }, {rootMargin: '-50px'});
+
         showLightBox = (event) => {
                 document.body.style.overflow='hidden';
                 document.querySelector('.behindBox').classList.add('showBox');
@@ -19,6 +31,13 @@ class Gallery extends Component {
                         document.querySelector('.right').style.display = 'initial';
                     }
         }
+
+        componentDidMount = () => {
+                const galleryItems = document.querySelectorAll('.galleryItem');
+                galleryItems.forEach(item => {
+                        this.galleryObserver.observe(item);
+                });
+        };
 
         render() {
                 return (

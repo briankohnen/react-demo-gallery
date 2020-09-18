@@ -12,7 +12,7 @@
     background: rgba(0,0,0,0.6);
     padding: 10px;
     overflow: hidden;
-    /* border-bottom: 2px solid blue; */
+    /* border-bottom: 2px solid yellow; */
     z-index: 1000;
 }
 .logo{
@@ -56,4 +56,33 @@ a:hover {
 }
 .right-nav li a:hover {
     color: palevioletred;
+}
+.dropdownContent {
+    visibility: hidden;
+    position: fixed;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: all 200ms ease-in;
+    background: black;
+    width: 10vw;
+}
+.dropdownContent p {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+    transition: background 200ms ease-in;
+}
+.showDrop {
+    opacity: 1;
+    visibility: visible;
+}
+.dropdownContent p:hover {
+    background: palevioletred;
+}
+@media screen and (max-width: 700px) {
+    .dropdownContent {
+        width: 20vw;
+    }
 }

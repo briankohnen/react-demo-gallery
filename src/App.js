@@ -3,6 +3,7 @@ import Nav from '../src/components/nav';
 import Gallery from '../src/components/gallery';
 import Footer from '../src/components/footer';
 import Lightbox from './components/lightbox';
+import About from '../src/components/about';
 
 class App extends Component {
 

@@ -1,0 +1,68 @@
+.about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 300ms;
+}
+.angleUnderlay {
+    position: absolute;
+    background: rgba(255, 255, 0, 0.63);
+    width: 200%;
+    height: 50vh;
+    transform: skewY(45deg) translateY(-50%);
+}
+.angleUnderlay2 {
+    position: absolute;
+    background: rgba(255, 255, 0, 0.082);
+    width: 200%;
+    height: 50vh;
+    transform: skewY(-10deg) translateY(10%);
+    filter: blur(5px);
+}
+.aboutHeader {
+    color: white;
+    margin: 85px auto;
+    max-width: 980px;
+}
+.aDescription {
+    color: white;
+    font-size: 18px;
+    max-width: 980px;
+    margin: 85px auto;
+    mix-blend-mode: screen;
+}
+.aboutClose {
+    color: white;
+    font-size: 28px;
+    position: fixed;
+    right: 12%;
+    top: 4%;
+    cursor: pointer;
+    transition: color 150ms;
+}
+.aboutClose:hover {
+    color: palevioletred;
+}
+.showAbout {
+    transform: translateY(0);
+    opacity: 1;
+}
+@media screen and (max-width: 700px) {
+    .aboutHeader {
+        max-width: 85vw;
+    }
+    .aDescription {
+        font-size: 14px;
+        max-width: 85vw;
+        text-align: right;
+    }
+    .aboutClose {
+        right: 5%;
+    }
+}
