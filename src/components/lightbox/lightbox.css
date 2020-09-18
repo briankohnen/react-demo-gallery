@@ -1,0 +1,47 @@
+.behindBox {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.822);
+    z-index: 2000;
+    transition: 300ms ease-in-out;
+}
+.lightImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 75vw;
+    max-height: 85vh;
+}
+.lboxNav {
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    transition: color 150ms;
+}
+.left {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+}
+.right {
+    position: fixed;
+    top: 50%;
+    right: 10%;
+}
+.close {
+    position: fixed;
+    top: 2%;
+    right: 10%;
+}
+.showBox {
+    visibility: visible;
+    opacity: 1;
+}
+.lboxNav:hover {
+    color:palevioletred;
+}
