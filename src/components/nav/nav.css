@@ -23,6 +23,7 @@
     text-decoration: none;
     color: #fff;
     font-size: 32px;
+    transition: color 150ms;
 }
 .menu-wrapper nav {
     float: right;
@@ -40,6 +41,7 @@
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
+    transition: color 150ms;
 }
 .nav-area.animate {
     top: -74px;
@@ -49,6 +51,9 @@
     z-index: 99;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
-a:active{
+a:hover {
+    color: palevioletred;
+}
+.right-nav li a:hover {
     color: palevioletred;
 }
