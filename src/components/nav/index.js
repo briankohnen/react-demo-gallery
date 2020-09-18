@@ -17,6 +17,11 @@ class Nav extends Component {
         document.querySelector('.dropdownContent').classList.remove('showDrop');
     };
 
+    navCombo = (event) => {
+        this.props.handleCollectionState(event);
+        this.closeDropdown();
+    };
+
     toggleDropdown = (event) => {
         document.querySelector('.dropdownContent').classList.add('showDrop');
         if (event.target !== document.querySelector('.navDropdown')) {
@@ -36,11 +41,11 @@ class Nav extends Component {
                     <nav>
                         <ul class='right-nav'>
                             <li>
-                                <a href='#' className='navDropdown' onClick={this.toggleDropdown} onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>Portfolio</a>
+                                <a href='javascript:void(0);' className='navDropdown' onClick={this.toggleDropdown} onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>Portfolio</a>
                                 <div className='dropdownContent' onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
-                                    <a href='#' data-collection='1' onClick={this.props.handleCollectionState}>ONE</a>
-                                    <a href='#' data-collection='2' onClick={this.props.handleCollectionState}>TWO</a>
-                                    <a href='#' data-collection='3' onClick={this.props.handleCollectionState}>THREE</a>
+                                    <a href='#' data-collection='1' onClick={this.navCombo}>ONE</a>
+                                    <a href='#' data-collection='2' onClick={this.navCombo}>TWO</a>
+                                    <a href='#' data-collection='3' onClick={this.navCombo}>THREE</a>
                                 </div>
                             </li>
                             <li><a href='javascript:void(0);' onClick={this.showAbout}>About</a></li>
